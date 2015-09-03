@@ -1,0 +1,18 @@
+<VirtualHost *:80>
+  ServerName www.mysite.tld
+
+  ErrorLog /var/log/apache2/mysite_error.log
+  CustomLog /var/log/apache2/mysite_access.log combined
+  LogLevel warn
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteLog /var/log/apache2/mysite_rewrite.log
+  RewriteLogLevel 5
+  RewriteRule ^($|/.*) http://127.0.0.1:8080/VirtualHostBase/http/www.mysite.tld:80/taishin/VirtualHostRoot$1 [L,P]
+</IfModule>
+
+   ProxyPass / http://localhost:8080/VirtualHostBase/http/www.mysite.tld:80/mysite/VirtualHostRoot/
+   ProxyPassReverse / http://localhost:8080/VirtualHostBase/http/www.mysite.tld:80/mysite/VirtualHostRoot/
+
+</VirtualHost>
