@@ -34,9 +34,9 @@ Python 的學習曲線和緩，獲得入門的基本物件後，即可解決許�
 
 選擇 Python 做為入門的程式語言，我能相信你日後一定不會後悔，但如果你希望只學 Python 就能滿足所有期望，恐怕是不容易如願。
 
-由於 Python 並非系統語言 (System Language)，在執行效能上，未能如 C 語言一般快速，因此在著重執行效率的應用場合裡，你應該利用 Python 與 C 語言巧妙結合的「延伸」(extension) 功能 [1]，以便突破執行效能的瓶頸。
+由於 Python 並非系統語言 (System Language)，在執行效能上，未能如 C 語言一般快速，因此在著重執行效率的應用場合裡，你應該利用 Python 與 C 語言巧妙結合的「延伸」(extension) 功能 [#f1]_，以便突破執行效能的瓶頸。
 
-很多朋友會躊躇懷疑，到底該使用 Python 或是 Java 工具。簡單的答案，可以是「請學 Python 語言，但不妨直接使用 Java 的工具」。Java 世界的物件工具相當豐富，透過類似 JPython (Jython 是其中一個專案 [2]) 的成果，Python 程式人員是可以和 Java 資源結合相通的。
+很多朋友會躊躇懷疑，到底該使用 Python 或是 Java 工具。簡單的答案，可以是「請學 Python 語言，但不妨直接使用 Java 的工具」。Java 世界的物件工具相當豐富，透過類似 JPython (Jython 是其中一個專案 [#f2]_) 的成果，Python 程式人員是可以和 Java 資源結合相通的。
 
 
 .. 圖一：利用 jython 所製作的 applet 示範
@@ -47,7 +47,7 @@ Python 的學習曲線和緩，獲得入門的基本物件後，即可解決許�
   ●中標●
   藏經閣
 
-  這份文件將被置於 Python/Zope User Group 網站的教學資源內 [3]，日後若有相關的更新資料，你可以在此尋得，其他諸如投影簡報檔、講義、習題等，也一併累積於此。
+  這份文件將被置於 Python/Zope User Group 網站的教學資源內 [#f3]_，日後若有相關的更新資料，你可以在此尋得，其他諸如投影簡報檔、講義、習題等，也一併累積於此。
 
   如果你恰巧是校園的老師或學生，對於這份文件有應用的需要，歡迎免費使用，但煩請寄信告知使用的狀況，以便成為日後有人打算進行 Python 應用實況調查的參考。
 
@@ -87,7 +87,7 @@ Python 的學習曲線和緩，獲得入門的基本物件後，即可解決許�
 
   Linux 及 FreeBSD 的使用者，在安裝系統時，通常就可以選擇安裝此一程式套件，相當簡易。圖形函式庫的搭配，在安裝上是另一項議題，幸好在本教學手冊內的安排裡，前兩、三個模組並不會需要使用到圖形函式庫。
 
-  平常使用 Windows 環境的新手，在入門之際，建議可以優先選用 ActiveState 公司 [4] 所發展的 ActivePython 程式來安裝，這個工具程式本身不但與 Python 原版程式相容，更具備「詳細線上補助說明」、「互動性高的圖形操作環境」、「更易用的編輯器」等優點 (如圖三所示)。
+  平常使用 Windows 環境的新手，在入門之際，建議可以優先選用 ActiveState 公司 [#f4]_ 所發展的 ActivePython 程式來安裝，這個工具程式本身不但與 Python 原版程式相容，更具備「詳細線上補助說明」、「互動性高的圖形操作環境」、「更易用的編輯器」等優點 (如圖三所示)。
 
   在 http://zope.slat.org/Tutor/ 網址裡，已整理 ActivePython 程式檔案供學員下載，檔案大小約 12 MB，內附 Python Interpreter Shell、PythonWin Environment、Python Package Manager 三個工具程式，以及 ActivePython Documentation 與 Dive Into Python 兩份說明文件。
   此時 Python 已全面進入 2.x 版本世代，舊版的 1.5.x 或 1.6.x，大部份的功能仍適用於新版中，但在教學手冊裡，將會以 2.x 版本的功能為主。
@@ -98,7 +98,7 @@ Python 的學習曲線和緩，獲得入門的基本物件後，即可解決許�
   ●中標●
   另一優秀工具 cygwin
 
-  透過 cygwin [5] 這套小巧卻基本功能完整的工具程式， Windows 使用者可以非常輕鬆地獲得一個模仿 Linux 操作習慣的基本環境。這是一套在 Windows 系統上提供 Unix 環境的程式集合，由 Red Hat 公司 (事實上是 Cygnus 公司，已被 Red Hat 公司購併) 所開發。整套工具包含兩個部份：
+  透過 cygwin [#f5]_ 這套小巧卻基本功能完整的工具程式， Windows 使用者可以非常輕鬆地獲得一個模仿 Linux 操作習慣的基本環境。這是一套在 Windows 系統上提供 Unix 環境的程式集合，由 Red Hat 公司 (事實上是 Cygnus 公司，已被 Red Hat 公司購併) 所開發。整套工具包含兩個部份：
 
   * 一個 DLL (cygwin1.dll) 檔案，擔任 UNIX 模擬層的角色，提供基本 UNIX API 功能。
   * 一組移植自 UNIX 的工具程式，提供延續自 UNIX/Linux 使用習慣的功能。
@@ -397,9 +397,11 @@ dir(a) 用以查詢物件 a (也就是一個字串) 的名稱空間狀況，例�
 ●中標●
 相關資源
 
-[1] 由 Guido van Rossum 所撰寫的 Extending and Embedding the Python Interpreter 文件中，說明了如何將 Python 與 C 語言進行結合，請至 http://www.python.org/ 取得線上文件。
-[2] Jython 是一套以 Java 程式語言為基底的 Python 實作品，為了與傳統 C 語言的實作品相區別，通常分別以 CPython 與 JPython 稱之。詳細說明可造訪 http://jython.sourceforge.net/ 網址。
-[3] Python/Zope User Group 為台灣 Python 與 Zope 愛好者的交流園地，請造訪 http://zope.slat.org/ 網址取得更多資訊。
-[4] ActiveState 公司以提供開放源碼程式語言工具聞名，請至 http://www.activestate.com/ 網址造訪。
-[5] Red Hat 公司之 cygwin 工具產品，可至 http://cygwin.com/ 網址取得資訊。
+.. rubric:: Footnotes
+
+.. [#f1] 由 Guido van Rossum 所撰寫的 Extending and Embedding the Python Interpreter 文件中，說明了如何將 Python 與 C 語言進行結合，請至 http://www.python.org/ 取得線上文件。
+.. [#f2] Jython 是一套以 Java 程式語言為基底的 Python 實作品，為了與傳統 C 語言的實作品相區別，通常分別以 CPython 與 JPython 稱之。詳細說明可造訪 http://jython.sourceforge.net/ 網址。
+.. [#f3] Python/Zope User Group 為台灣 Python 與 Zope 愛好者的交流園地，請造訪 http://zope.slat.org/ 網址取得更多資訊。
+.. [#f4] ActiveState 公司以提供開放源碼程式語言工具聞名，請至 http://www.activestate.com/ 網址造訪。
+.. [#f5] Red Hat 公司之 cygwin 工具產品，可至 http://cygwin.com/ 網址取得資訊。
 
