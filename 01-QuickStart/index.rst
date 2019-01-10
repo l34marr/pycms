@@ -24,3 +24,6 @@ http://mockup-training.readthedocs.org/en/latest/intro.html
 http://datakurre.pandala.org/2015/09/generating-plone-theming-mockups-with.html
 http://www.managertoday.com.tw/columns/view/51194
 
+https://ideas.ted.com/what-can-we-learn-from-people-who-succeed-later-in-life
+https://medium.com/@StrikingLoo/exploratory-statistical-data-analysis-with-a-real-dataset-using-pandas-208007798b92
+https://medium.com/@briansaturnino/python-technology-is-magic-62740940e5d
